@@ -1,0 +1,16 @@
+{
+  "name": "concat-cli",
+  "version": "0.0.0",
+  "description": "Command line implementation of contact module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "preferGlogal": "true",
+  "author": "Javier Alba",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.5.0",
+    "concat": "^1.0.0"
+  }
+}
