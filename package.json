@@ -1,7 +1,7 @@
 {
   "name": "concat-cli",
   "version": "1.0.0",
-  "description": "Command line implementation of contact module",
+  "description": "Command line implementation of concat module",
   "main": "index.js",
   "keywords": [
     "concatenate",
