@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 var concat = require('concat'),
     args = process.argv,
     files,
