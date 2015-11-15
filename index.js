@@ -1,32 +1,23 @@
-#!/usr/bin/env node
+var exampleTxt = 'This will concatenate all the js files in the current directory into a bundle.js';
+var argv = require('yargs')
+    .option('f', {
+        alias: 'files',
+        demand: true,
+        array: true,
+        describe: 'files or glob/wildcard to be matched and concatenated',
+        type: 'string'
+    })
+    .option('o', {
+        alias: 'output',
+        default: 'all',
+        describe: 'the resulting file of the concatenation',
+        type: 'string'
+    })
+    .usage('$0 concat-cli -f string -o string')
+    .example('concat-cli -f *.js -o bundle.js', exampleTxt)
+    .help('help')
+    .argv;
 
-var concat = require('concat'),
-    args = process.argv,
-    files,
-    output,
-    dest,
-    filesIdx = args.indexOf('-f') > args.indexOf('--files') ? 
-               args.indexOf('-f') : args.indexOf('--files'),
-    outputIdx = args.indexOf('-o') > args.indexOf('--output') ? 
-                args.indexOf('-o') : args.indexOf('--output');
- 
-filesIdx < 0 && console.log('files parameter missing') && process.exit(1);
+var concatFunctions = require('./concatFunctions');
 
-outputIdx < 0 ? (outputIdx = args.length) && (dest = 'all.') : dest = args[args.length - 1];
-
-files = args.slice(filesIdx+1, outputIdx);
-
-dest === 'all.' && (dest += files[0].split('.')[1]);
- 
-concat(files, dest, function (error) {
-  if(error) {
-   	console.error(error);
-   	process.exit(2);
-   	return;
-  }
-  console.log('files concatenated');
-  process.exit(0);
-});
-
-
-
+concatFunctions.concatFiles(argv.f, argv.o);

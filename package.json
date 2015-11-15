@@ -1,6 +1,6 @@
 {
   "name": "concat-cli",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Command line implementation of concat module",
   "main": "index.js",
   "keywords": [
@@ -16,19 +16,26 @@
     "node": ">=0.10"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./node_modules/mocha/bin/mocha --reporter list"
   },
   "preferGlogal": "true",
   "author": "Javier Alba",
   "license": "ISC",
   "bin": {
-    "concat-cli": "index.js"
+    "concat-cli": "node index.js"
   },
   "dependencies": {
-    "concat": "^1.0.0"
+    "chalk": "^1.1.1",
+    "concat": "^1.0.0",
+    "yargs": "^3.30.0"
   },
   "bugs": {
     "url": "https://github.com/jalba/concat-cli/issues"
   },
-  "homepage": "https://github.com/jalba/concat-cli"
+  "homepage": "https://github.com/jalba/concat-cli",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.3",
+    "sinon": "^1.17.2"
+  }
 }
