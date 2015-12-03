@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var exampleTxt = 'This will concatenate all the js files in the current directory into a bundle.js';
 var argv = require('yargs')
     .option('f', {
