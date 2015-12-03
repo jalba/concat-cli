@@ -1,6 +1,6 @@
 {
   "name": "concat-cli",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Command line implementation of concat module",
   "main": "index.js",
   "keywords": [
@@ -22,7 +22,7 @@
   "author": "Javier Alba",
   "license": "ISC",
   "bin": {
-    "concat-cli": "node index.js"
+    "concat-cli": "./index.js"
   },
   "dependencies": {
     "chalk": "^1.1.1",
