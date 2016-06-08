@@ -1,6 +1,6 @@
 {
   "name": "concat-cli",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Command line implementation of concat module",
   "main": "index.js",
   "keywords": [
