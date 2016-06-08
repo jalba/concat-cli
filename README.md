@@ -18,8 +18,11 @@ Pass the files to concatenate (-f or --files parameter) to the tool, and optiona
 
 ```bash
 $ concat-cli -f *.js -o bundle.js
+$ concat-cli -f subdir/*(pattern1|pattern2|pattern3).js -o bundle.js
 ```
 Concat-cli will create the bundle.js file, if it doesn't exists, and dump the content of all the passed files into that one. If you don't provide an output file, the tool will concatenate everything into a file called 'all', with the correct extension.
+
+You can use any glob patterns in `--files` argument (see [npm glob](https://www.npmjs.com/package/glob)).
 
 
 ## Test
